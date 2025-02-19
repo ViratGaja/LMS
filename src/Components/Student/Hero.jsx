@@ -22,6 +22,7 @@ const Hero = () => {
         <SearchBar/>
         <Companies/>
         <CourseSection/>
+        
       </div>
 
 
