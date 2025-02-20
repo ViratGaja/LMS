@@ -3,6 +3,7 @@ import { assets } from '../../assets/assets'
 import SearchBar from './SearchBar'
 import Companies from './Companies'
 import CourseSection from './CourseSection'
+import Testimonails from './Testimonails'
 
 const Hero = () => {
   return (
@@ -22,6 +23,7 @@ const Hero = () => {
         <SearchBar/>
         <Companies/>
         <CourseSection/>
+        <Testimonails/>
         
       </div>
 
