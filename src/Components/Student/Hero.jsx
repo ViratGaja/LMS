@@ -4,6 +4,8 @@ import SearchBar from './SearchBar'
 import Companies from './Companies'
 import CourseSection from './CourseSection'
 import Testimonails from './Testimonails'
+import CallToAction from './CallToAction'
+import Footer from './Footer'
 
 const Hero = () => {
   return (
@@ -24,6 +26,8 @@ const Hero = () => {
         <Companies/>
         <CourseSection/>
         <Testimonails/>
+        <CallToAction/>
+        <Footer/>
         
       </div>
 
