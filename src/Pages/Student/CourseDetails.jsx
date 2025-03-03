@@ -5,6 +5,7 @@ import { assets } from '../../assets/assets';
 import humanizeDuration from 'humanize-duration';
 import Footer from '../../Components/Student/Footer'
 import YouTube from 'react-youtube';
+import Loading from '../../Components/Student/Loading';
 const CourseDetails = () => {
   const { id } = useParams();
   const [courseData, setCourseData] = useState(null);
@@ -35,9 +36,7 @@ const CourseDetails = () => {
   }
 
 
-  if (!courseData) {
-    return <div>Loading course details...</div>;
-  }
+ 
 
   return courseData ? (
     <>
@@ -192,7 +191,7 @@ const CourseDetails = () => {
       </div>
       <Footer />
     </>
-  ) : <p>Loading</p>
+  ) : <Loading/>
 };
 
 export default CourseDetails;
