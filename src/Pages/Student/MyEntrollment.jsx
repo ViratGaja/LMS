@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../../Context/AppContext';
-
+import {Line} from 'rc-progress'
+import Footer from '../../Components/Student/Footer'
 const MyEntrollment = () => {
   const { entrolledCourses, calculateCourseDuration,navigate } = useContext(AppContext);
 
@@ -19,6 +20,7 @@ const MyEntrollment = () => {
   ])
 
   return (
+    <>
     <div className="md:px-36 px-8 pt-10">
       <h1 className="text-2xl font-semibold">My Enrollments</h1>
 
@@ -40,6 +42,7 @@ const MyEntrollment = () => {
                   <img className="w-14 sm:w-24 md:w-28" src={course.courseThumbnail} alt="" />
                   <div className="flex-1">
                     <p className="mb-1">{course.courseTitle}</p>
+                    <Line className='bg-gray-300 rounded-full' strokeWidth={2} percent={progressArray[index] ? (progressArray[index].lectureCompleted*100)/progressArray[index].totalLectures:0} />
                   </div>
                 </td>
                 <td className="px-4 py-3">{calculateCourseDuration(course)}</td>
@@ -54,10 +57,11 @@ const MyEntrollment = () => {
           </tbody>
         </table>
       </div>
-
-      {/* Mobile Cards */}
-      
+      {/* Mobile Cardms */}
+    
     </div>
+  <Footer/>
+  </>
   );
 };
 
