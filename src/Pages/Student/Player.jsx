@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../Context/AppContext'
 import { useParams } from 'react-router-dom';
+import { assets } from '../../assets/assets';
 
 const Player = () => {
   const {entrolledCourses,calculateChapterTime}=useContext(AppContext);
@@ -50,7 +51,7 @@ const Player = () => {
                     {
                       chapter.chapterContent.map((lecture, index) => (
                         <li key={index} className='flex items-start gap-2 py-1'>
-                          <img src={assets.play_icon} alt="" className='w-4 h-4 mt-1' />
+                          <img src={false ? assets.blue_tick_icon:assets.play_icon} alt="" className='w-4 h-4 mt-1' />
                           <div className='flex items-center justify-between w-full text-gray-800 text-xs md:text-default'>
                             <p>{lecture.lectureTitle}</p>
                             <div className='flex gap-2'>
