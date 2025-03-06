@@ -43,7 +43,7 @@ const CourseDetails = () => {
       <div className="flex md:flex-row flex-col-reverse gap-10 relative items-start justify-evenly md:px-8 md:pt-20 text-left">
         <div className="absolute top-0 left-0 w-full h-section-height -z-1 bg-gradient-to-b from-cyan-100/70"></div>
 
-        <div className='max-w-xl z-10 text-grey-500'>
+        <div className='max-w-xl p-4 z-10 text-grey-500'>
           <h1 className='md:text-course-deatails-heading-large text-course-deatails-heading-large font-semibold text-gray-800'>{courseData.courseTitle}</h1>
           <p className='pt-4 md:txt-base text-sm' dangerouslySetInnerHTML={{ __html: courseData.courseDescription.slice(0, 200) }}></p>
 
